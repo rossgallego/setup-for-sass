@@ -1,0 +1,115 @@
+.logo{
+    background: url("rg-logo.svg") no-repeat;
+    background-size: 100% 100%;
+    width: 200px;
+    height: 50px;
+    @include mq_2(xx-small) {
+        width: 300px;
+    }
+    @include mq_2(x-small) {
+        width: 274px;
+    }
+    @include mq_2(small) {
+        width: 315px;
+    }
+    @include mq_2(medium) {
+        height: 52px;
+        width: 328px;
+    }
+    @include mq_2(large) {
+        height: 58px;
+        width: 365px;
+    }
+    @include mq_2(large) {
+        height: 61px;
+        width: 380px;
+    }
+}
+/*nav*/
+.main-nav{
+    background: transparent;
+	left: 0;
+	margin:0;
+	padding: 25px 0 20px 0;
+	position: fixed;
+	right: 0;
+	top:0;
+	z-index: 1030;
+};
+.main-nav--light{
+    background: $grey-opacity;
+}
+.main-nav--dark{
+    background: $dark-grey-opacity;
+}
+.nav-lists{
+	display: none;
+	@include mq_2(medium) {
+		display: block
+	}
+}
+.nav-list{
+	display: block;
+	float: right;
+	margin:0;
+	padding: 0;
+	&--link{
+		display: block;
+		padding: 18px 20px 0 20px;
+	}
+}
+/* responsive */
+.nav-responsive-open{
+    display: block;
+    float: right;
+    cursor:pointer;
+    @include mq_2(medium) {
+        display: none
+    }
+}
+.nav-responsive-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    z-index: 9999;
+    cursor:pointer; 
+    @include mq_2(x-small){
+        top: 20px;
+        right: 45px;
+    }
+}
+.nav-responsive {
+    height: 100%;
+    width: 0;
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    background-color: $dark-opacity;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; 
+    z-index: 9998
+}
+.nav-responsive-full{
+    width: 100%
+}
+.nav-responsive-zero{
+    width: 0%
+}
+.nav-responsive-lists {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+.nav-responsive-list{
+
+}
+.nav-responsive-list--link {
+    padding: 8px;
+    text-decoration: none;
+    display: block; 
+    transition: 0.3s; 
+
+}
